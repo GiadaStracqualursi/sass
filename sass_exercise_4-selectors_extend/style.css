@@ -1,0 +1,50 @@
+body .container h2, body .container h1 {
+  color: green;
+  text-decoration: underline;
+  -webkit-text-decoration-color: blue;
+          text-decoration-color: blue;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+body .container {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  width: 98vw;
+  align-items: center;
+  justify-items: center;
+}
+body .container h2 {
+  border: 1px solid red;
+  padding: 10px;
+}
+body .container section:nth-child(3) {
+  display: flex;
+  margin: 20px;
+}
+body .container section:nth-child(3) article:nth-child(1), body .container section:nth-child(3) article:nth-child(3) {
+  text-align: center;
+  color: blue;
+  border: green 1px solid;
+  font-size: 1rem;
+}
+body .container section:nth-child(3) article:nth-child(2), body .container section:nth-child(3) article:nth-child(4) {
+  text-align: center;
+  color: red;
+  border: green 1px solid;
+  font-size: 1rem;
+}
+body .container section:nth-child(4) article:nth-child(1) {
+  text-align: center;
+  margin-bottom: 20px;
+  color: green;
+  border: blue 1px solid;
+  font-size: 1rem;
+}/*# sourceMappingURL=style.css.map */

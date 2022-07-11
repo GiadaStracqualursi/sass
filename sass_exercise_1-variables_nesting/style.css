@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+}
+body .container {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  align-items: center;
+  justify-items: center;
+}
+body .container h1 {
+  text-align: center;
+  -webkit-text-decoration-color: blue;
+          text-decoration-color: blue;
+  color: green;
+  text-decoration: underline;
+}
+body .container .section {
+  display: flex;
+  flex-direction: row;
+  width: 1500px;
+  text-align: center;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+body .container .section .red {
+  color: red;
+  text-align: center;
+  border: 1px solid green;
+  width: 300px;
+  height: 100px;
+}
+body .container .section .blue {
+  color: blue;
+  text-align: center;
+  border: 1px solid green;
+  width: 300px;
+  height: 100px;
+}/*# sourceMappingURL=style.css.map */

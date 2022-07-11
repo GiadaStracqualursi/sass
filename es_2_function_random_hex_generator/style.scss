@@ -1,0 +1,50 @@
+@function random-hex(){
+  $contenitore: '';
+  $i: 6;
+  @while $i > 0 {
+    $unità: random(16) - 1;
+    $lettere: A, B, C, D, E, F;
+    @if $unità > 9 { 
+      $unità: nth($lettere, ($unità - 9));
+    };
+    $contenitore: str-insert($contenitore, ("" + $unità), 0);
+    $i: $i - 1;
+  }
+  @return unquote("#"+"#{$contenitore}");
+}
+
+
+ body{
+   display: grid;
+  place-content: center;
+    width: 100vw;
+    height: 100vh;
+
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+ 
+  
+ 
+
+
+
+.box{
+ 
+  width: 50px;
+  height: 50px;
+  @for $i from 1 through 12 {
+    &:nth-child(#{$i}){
+        background-color:random-hex()
+    }
+  
+    }
+  }
+  }
+}
+   
+   

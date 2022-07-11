@@ -1,0 +1,85 @@
+
+%titolo{
+    color: green;
+   text-decoration: underline;
+   text-decoration-color: blue;
+}
+
+@function rem($px){
+    @return ($px / 15px) * 1rem
+}
+
+
+
+@mixin article ($color, $border, $font-size){
+    color: $color;
+    border:  $border;
+    font-size: $font-size;
+}
+
+
+
+$color-blue:blue;
+$color-green: green;
+$color-red: red;
+$border-blue: 1px solid blue;
+$border-green: 1px solid green;
+
+
+body{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+     align-items: center;
+     justify-items: center;
+     justify-content: center;
+    
+ 
+ .container { 
+     
+ 
+    border: 1px solid $color-red;
+     display: flex;
+     flex-direction: column;
+     width: 98vw;
+     align-items: center;
+     justify-items: center;
+    
+     
+ 
+     h1{ 
+         @extend %titolo;
+     }
+
+     h2{
+        border: 1px solid red;
+        padding: 10px;
+        @extend %titolo;
+     }
+    
+ 
+     & section:nth-child(3){
+     display: flex;
+     margin: 20px;
+     & article:nth-child(1),
+     & article:nth-child(3) {
+        text-align: center;
+         @include article ($color-blue, $color-green 1px solid, rem(15px))
+     }
+     & article:nth-child(2),
+     & article:nth-child(4) {
+        text-align: center;
+         @include article ($color-red, $color-green 1px solid, rem(15px))
+     }
+
+  
+}
+section:nth-child(4){
+    & article:nth-child(1) {
+        text-align: center;
+        margin-bottom: 20px;
+        @include article ($color-green, $color-blue 1px solid, rem(15px))
+    }
+ }
+}
+}
